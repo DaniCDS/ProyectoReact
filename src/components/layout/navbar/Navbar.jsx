@@ -1,6 +1,6 @@
 import CartWidget from "../../common/cardWidget/CartWidget";
 import MenuIcon from "@mui/icons-material/Menu";
-import { AppBar, Toolbar, Typography, IconButton, Button } from "@mui/material";
+import { AppBar, Toolbar, IconButton, Button } from "@mui/material";
 import "./NavBar.css";
 
 const Navbar = () => {
@@ -13,7 +13,6 @@ const Navbar = () => {
           </IconButton>
 
           <h3>DP</h3>
-          <br />
           <h6>Muebles de Diseño</h6>
           <div class="botonesMenu">
             <Button color="inherit">Home Office</Button>

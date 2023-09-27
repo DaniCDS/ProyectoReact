@@ -1,10 +1,9 @@
-const ItemListContainer = ({ saludo, edad }) => {
+const ItemListContainer = ({ saludo }) => {
   //   const { nombre, edad, x } = props;
 
   return (
     <div>
       <h4>{saludo}</h4>
-      <h5>Mi edad es {edad}</h5>
     </div>
   );
 };

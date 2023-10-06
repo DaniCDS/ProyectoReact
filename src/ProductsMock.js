@@ -1,0 +1,38 @@
+export let products = [
+  {
+    id: 1,
+    title: "Nike",
+    price: 15000,
+    stock: 4,
+    description: "las mejores zapatillas",
+    category: "deportivas",
+    img: "",
+  },
+  {
+    id: 2,
+    title: "Nike",
+    price: 15000,
+    stock: 4,
+    description: "las mejores zapatillas",
+    category: "deportivas",
+    img: "",
+  },
+  {
+    id: 3,
+    title: "Nike",
+    price: 15000,
+    stock: 4,
+    description: "las mejores zapatillas",
+    category: "deportivas",
+    img: "",
+  },
+  {
+    id: 4,
+    title: "Nike",
+    price: 15000,
+    stock: 4,
+    description: "las mejores zapatillas",
+    category: "deportivas",
+    img: "",
+  },
+];

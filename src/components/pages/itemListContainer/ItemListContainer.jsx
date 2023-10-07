@@ -3,14 +3,11 @@ import { products } from "../../../ProductsMock";
 import { useEffect, useState } from "react";
 
 const ItemListContainer = ({ saludo, edad }) => {
-  //   const { nombre, edad, x } = props;
-
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const tarea = new Primise((resolve, reject) => {
+    const tarea = new Promise((resolve, reject) => {
       resolve(products);
-      // reject("Lo siento algo salio mal")
     });
 
     tarea
@@ -19,7 +16,7 @@ const ItemListContainer = ({ saludo, edad }) => {
   }, []);
 
   console.log(items);
-  return <ItemList />;
+  return <ItemList items={items} />;
 };
 
 export default ItemListContainer;

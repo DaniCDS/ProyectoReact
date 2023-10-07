@@ -14,7 +14,7 @@ const Navbar = () => {
 
           <h3>DP</h3>
           <h6>Muebles de Diseño</h6>
-          <div class="botonesMenu">
+          <div className="botonesMenu">
             <Button color="inherit">Home Office</Button>
             <Button color="inherit">Living</Button>
             <Button color="inherit">Comedor</Button>

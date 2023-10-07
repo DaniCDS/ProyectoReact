@@ -23,7 +23,8 @@ const CounterContainer = ({ stock }) => {
     }
   };
 
-  Console.log("Me monte o actualice");
+  console.log("Me monte o actualice");
+
   useEffect(
     () => {
       //aca va el codigo que no quiero que se vuelva a ejecutar

@@ -1,5 +1,5 @@
 .botonesMenu {
-  position: inherit;
+  position: sticky;
   margin-right: auto;
   margin-left: auto;
 }

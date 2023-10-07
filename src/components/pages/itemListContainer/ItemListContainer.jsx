@@ -1,25 +1,25 @@
 import ItemList from "./ItemList";
-import { products } from "../../../productsMock";
+import { products } from "../../../ProductsMock";
+import { useEffect, useState } from "react";
 
 const ItemListContainer = ({ saludo, edad }) => {
   //   const { nombre, edad, x } = props;
 
-  const tarea = new Primise((resolve, reject) => {
-    resolve(products);
-    // reject("Lo siento algo salio mal")
-  });
+  const [items, setItems] = useState([]);
 
-  tarea
-    .then((res) => console.log("resolve: ", res))
-    .catch((error) => console.log("reject: ", error));
+  useEffect(() => {
+    const tarea = new Primise((resolve, reject) => {
+      resolve(products);
+      // reject("Lo siento algo salio mal")
+    });
 
-  return (
-    <div>
-      <h4>{saludo}</h4>
-      <h5>Mi edad es {edad}</h5>
-      <ItemList />
-    </div>
-  );
+    tarea
+      .then((res) => setItems(res))
+      .catch((error) => console.log("reject: ", error));
+  }, []);
+
+  console.log(items);
+  return <ItemList />;
 };
 
 export default ItemListContainer;

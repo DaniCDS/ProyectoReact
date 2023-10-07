@@ -17,10 +17,6 @@ function App() {
   const [montar, setMontar] = useState(false);
   return (
     <div>
-      {/* <Home /> */}
-      {/* <Login /> */}
-
-      {/* <ItemListContainer /> */}
       {/* <CounterContainer stock={5} />
       <CounterContainer stock={6} />
       <CounterContainer stock={9} /> */}
@@ -29,10 +25,7 @@ function App() {
 
       <ThemeProvider theme={customTheme}>
         <Navbar />
-        {/* <MaterialUi /> */}
-
         <ItemListContainer />
-        {/* <PruebaResponsive /> */}
       </ThemeProvider>
     </div>
   );

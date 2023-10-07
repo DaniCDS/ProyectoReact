@@ -1,21 +1,16 @@
 import ItemList from "./ItemList";
+import { products } from "../../../ProductsMock";
 
 const ItemListContainer = ({ saludo, edad }) => {
   //   const { nombre, edad, x } = props;
 
   const tarea = new Primise((resolve, reject) => {
-    resolve("se resolvio la promesa");
+    resolve(products);
     // reject("Lo siento algo salio mal")
   });
 
-  tarea.then().catch();
-  return (
-    <div>
-      <h4>{saludo}</h4>
-      <h5>Mi edad es {edad}</h5>
-      <ItemList />
-    </div>
-  );
+  tarea.then((res) => console.log(res)).catch((error) => console.log(error));
+  return <ItemList />;
 };
 
 export default ItemListContainer;

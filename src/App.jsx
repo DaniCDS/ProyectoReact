@@ -26,8 +26,8 @@ function App() {
 
       <ThemeProvider theme={customTheme}>
         <Navbar />
-        {/* <ItemListContainer /> */}
-        <FetchingData />
+        <ItemListContainer />
+        {/* <FetchingData /> */}
       </ThemeProvider>
     </div>
   );

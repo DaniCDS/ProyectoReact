@@ -7,7 +7,7 @@ const ItemList = ({ items }) => {
       {/* <h4>{saludo}</h4> */}
       <section className="section">
         {items.map((item) => {
-          return <ProductCard key={item.id} item={item} />;
+          return <ProductCard key={item.id} item={item} className="item" />;
         })}{" "}
       </section>
     </div>

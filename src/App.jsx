@@ -11,6 +11,10 @@ import { makeStyles } from "@mui/material";
 import CounterContainer from "./components/common/counter/CounterContainer";
 import { useState } from "react";
 import FetchingData from "./components/pages/fechingData/FetchingData";
+import ItemDetailContainer from "./components/pages/itemDetailContainer/ItemDetailContainer";
+import FetchUno from "./components/fetching/FetchUno";
+import FetchDos from "./components/fetching/FetchDos";
+import CustomModal from "./components/common/modal/CustomModal";
 //import Home from "./components/pages/home/Home"
 
 function App() {
@@ -25,9 +29,15 @@ function App() {
       {montar && <CounterContainer stock={20} />} */}
 
       <ThemeProvider theme={customTheme}>
-        <Navbar />
-        <ItemListContainer />
+        {/* <Navbar />
+        <ItemDetailContainer /> */}
+        {/* <ItemListContainer /> */}
         {/* <FetchingData /> */}
+        {/* <FetchUno /> */}
+        {/* <FetchDos /> */}
+        <CustomModal>
+          <ItemListContainer />
+        </CustomModal>
       </ThemeProvider>
     </div>
   );

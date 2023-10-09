@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import CounterPresentacional from "./CounterPresentacional";
 import { ClassSharp } from "@mui/icons-material";
 
-const CounterContainer = ({ stock }) => {
-  const [contador, setContador] = useState(0);
+const CounterContainer = ({ stock, onAdd }) => {
+  const [contador, setContador] = useState(1);
   //   const stock = 5;
   const sumar = () => {
     if (contador <= stock) {
@@ -36,7 +36,12 @@ const CounterContainer = ({ stock }) => {
   );
 
   return (
-    <CounterPresentacional sumar={sumar} restar={restar} contador={contador} />
+    <CounterPresentacional
+      sumar={sumar}
+      restar={restar}
+      contador={contador}
+      onAdd={onAdd}
+    />
   );
 };
 

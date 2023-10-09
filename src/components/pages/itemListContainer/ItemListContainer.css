@@ -8,4 +8,7 @@ h4 {
   gap: 50px;
   margin: 8em;
   width: 1100px;
+  /* flex-grow: 5; */
+  flex-wrap: initial;
+  /* flex-basis: 100; */
 }

@@ -10,6 +10,7 @@ import PruebaResponsive from "./components/pages/pruebaResponsive/PruebaResponsi
 import { makeStyles } from "@mui/material";
 import CounterContainer from "./components/common/counter/CounterContainer";
 import { useState } from "react";
+import FetchingData from "./components/pages/fechingData/FetchingData";
 //import Home from "./components/pages/home/Home"
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
 
       <ThemeProvider theme={customTheme}>
         <Navbar />
-        <ItemListContainer />
+        {/* <ItemListContainer /> */}
+        <FetchingData />
       </ThemeProvider>
     </div>
   );

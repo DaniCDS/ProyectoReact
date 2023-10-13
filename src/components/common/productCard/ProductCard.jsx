@@ -3,6 +3,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ item, deleteProducts, modificar }) => {
   return (
@@ -26,23 +27,25 @@ const ProductCard = ({ item, deleteProducts, modificar }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" variant="outlined">
-          Ver Detalle
-        </Button>
-        <Button
+        <Link to={`/itemDetail/${item.id}`}>
+          <Button size="small" color="primary" variant="outlined">
+            Ver Detalle
+          </Button>
+        </Link>
+        {/* <Button
           size="small"
           variant="contained"
           onClick={() => deleteProducts(item.id)}
         >
           Eliminar
-        </Button>
-        <Button
+        </Button> */}
+        {/* <Button
           size="small"
           variant="contained"
           onClick={() => modificar(item.id)}
         >
           Modificar
-        </Button>
+        </Button> */}
       </CardActions>
     </Card>
   );

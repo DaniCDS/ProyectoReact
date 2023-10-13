@@ -1,0 +1,7 @@
+.ImagenLogo {
+  width: 80px;
+  height: auto;
+  border-radius: 100%;
+  float: left;
+  margin-left: auto; /* Ajusta el ángulo de rotación según sea necesario */
+}

@@ -1,16 +1,35 @@
 import ProductCard from "../../common/productCard/ProductCard";
 import "./ItemListContainer.css";
 
-const ItemList = ({ items }) => {
+const ItemList = ({ items, crearNuevo, deleteProducts, modificar }) => {
   return (
-    <div>
+    <>
+      <div>
+        <button onClick={crearNuevo}>Crear</button>
+      </div>
       {/* <h4>{saludo}</h4> */}
-      <section className="section">
+      <section
+        className="section"
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          gap: 20,
+          flexWrap: "wrap",
+        }}
+      >
         {items.map((item) => {
-          return <ProductCard key={item.id} item={item} className="item" />;
-        })}{" "}
+          return (
+            <ProductCard
+              key={item.id}
+              item={item}
+              className="item"
+              deleteProducts={deleteProducts}
+              modificar={modificar}
+            />
+          );
+        })}
       </section>
-    </div>
+    </>
   );
 };
 

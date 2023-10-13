@@ -4,9 +4,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
-const ProductCard = ({ item }) => {
+const ProductCard = ({ item, deleteProducts, modificar }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ Width: 345 }}>
       <CardActionArea>
         <CardMedia
           sx={{ height: 140 }}
@@ -28,6 +28,20 @@ const ProductCard = ({ item }) => {
       <CardActions>
         <Button size="small" color="primary" variant="outlined">
           Ver Detalle
+        </Button>
+        <Button
+          size="small"
+          variant="contained"
+          onClick={() => deleteProducts(item.id)}
+        >
+          Eliminar
+        </Button>
+        <Button
+          size="small"
+          variant="contained"
+          onClick={() => modificar(item.id)}
+        >
+          Modificar
         </Button>
       </CardActions>
     </Card>

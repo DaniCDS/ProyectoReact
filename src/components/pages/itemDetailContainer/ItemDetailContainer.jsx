@@ -15,10 +15,7 @@ const ItemDetailContainer = () => {
       resolve(producto);
     });
     getProduct
-      .then((res) =>
-        // setItem(producto)
-        setProductSelected(res)
-      )
+      .then((res) => setProductSelected(res))
       .catch((err) => console.log(err));
   }, [id]);
   const onAdd = (cantidad) => {
@@ -28,14 +25,8 @@ const ItemDetailContainer = () => {
     let obj = {
       ...productSelected,
       quantity: cantidad,
-
-      // title: productSelected.title,
-      // price: productSelected.price,
-      // img: productSelected.img,
-      // quantity: cantidad
     };
   };
-  // console.log(productSelected);
   return <ItemDetail productSelected={productSelected} onAdd={onAdd} />;
 };
 

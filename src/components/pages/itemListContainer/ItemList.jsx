@@ -7,7 +7,6 @@ const ItemList = ({ items, crearNuevo, deleteProducts, modificar }) => {
       <div>
         <button onClick={crearNuevo}>Crear</button>
       </div>
-      {/* <h4>{saludo}</h4> */}
       <section
         className="section"
         style={{

@@ -5,9 +5,15 @@ import Navbar from "./navbar/Navbar";
 const Layout = () => {
   return (
     <div>
-      <Navbar />
-      <Outlet />
-      <Footer />
+      <div style={{ height: "10vh" }}>
+        <Navbar />
+      </div>
+      <div style={{ minHeight: "80vh" }}>
+        <Outlet />
+      </div>
+      <div style={{ height: "5vh" }}>
+        <Footer />
+      </div>
     </div>
   );
 };

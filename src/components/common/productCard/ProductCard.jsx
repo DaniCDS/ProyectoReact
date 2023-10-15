@@ -32,20 +32,6 @@ const ProductCard = ({ item, deleteProducts, modificar }) => {
             Ver Detalle
           </Button>
         </Link>
-        {/* <Button
-          size="small"
-          variant="contained"
-          onClick={() => deleteProducts(item.id)}
-        >
-          Eliminar
-        </Button> */}
-        {/* <Button
-          size="small"
-          variant="contained"
-          onClick={() => modificar(item.id)}
-        >
-          Modificar
-        </Button> */}
       </CardActions>
     </Card>
   );

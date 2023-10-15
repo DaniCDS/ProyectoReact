@@ -32,7 +32,6 @@ const Navbar = () => {
                 <Button color="inherit">Dormitorio</Button>
               </Link>
             </div>
-            {/* <Link to="/cart">Ir a pepito</Link> */}
             <CartWidget />
           </Toolbar>
         </AppBar>

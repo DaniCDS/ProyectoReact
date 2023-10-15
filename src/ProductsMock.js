@@ -5,7 +5,7 @@ export let products = [
     price: 15000,
     stock: 4,
     description: "las mejores zapatillas",
-    category: "deportivas",
+    category: "Living",
     img: "https://carrionmuebles.com/wp-content/uploads/2022/04/0159_Auxiliar_17-ref.973-750x750.jpg",
   },
   {
@@ -14,7 +14,7 @@ export let products = [
     price: 15000,
     stock: 4,
     description: "las mejores zapatillas",
-    category: "deportivas",
+    category: "HomeOffice",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxWlAH21Z6Iiie4GX8zQZcr74OcQxnasCvYg&usqp=CAU",
   },
   {
@@ -23,7 +23,7 @@ export let products = [
     price: 15000,
     stock: 4,
     description: "las mejores zapatillas",
-    category: "deportivas",
+    category: "comedor",
     img: "https://acdn.mitiendanube.com/stores/001/582/756/products/muebles105811-4e837f7bf4a28fd8dd16534055507395-640-0.jpg",
   },
   {
@@ -32,7 +32,7 @@ export let products = [
     price: 15000,
     stock: 4,
     description: "las mejores zapatillas",
-    category: "deportivas",
+    category: "comedor",
     img: "https://www.mueblespsh.com.ar/images/0000000000MR400871837MR4008-En-Contexto-1.jpg",
   },
 ];

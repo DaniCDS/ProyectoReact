@@ -19,17 +19,24 @@ const Navbar = () => {
               <h6>Muebles de Diseño</h6>
             </Link>
             <div className="botonesMenu">
-              <Button color="inherit">Home Office</Button>
-              <Button color="inherit">Living</Button>
-              <Button color="inherit">Comedor</Button>
-              <Button color="inherit">Dormitorio</Button>
+              <Link to="/category/HomeOffice">
+                <Button color="inherit">Home Office</Button>
+              </Link>
+              <Link to="/category/Living">
+                <Button color="inherit">Living</Button>
+              </Link>
+              <Link to="/category/comedor">
+                <Button color="inherit">Comedor</Button>
+              </Link>
+              <Link to="/category/dormitorio">
+                <Button color="inherit">Dormitorio</Button>
+              </Link>
             </div>
             {/* <Link to="/cart">Ir a pepito</Link> */}
             <CartWidget />
           </Toolbar>
         </AppBar>
       </div>
-      <Outlet />
     </>
   );
 };

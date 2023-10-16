@@ -1,31 +1,12 @@
 import ProductCard from "../../common/productCard/ProductCard";
 import "./ItemListContainer.css";
 
-const ItemList = ({ items, crearNuevo, deleteProducts, modificar }) => {
+const ItemList = ({ items }) => {
   return (
     <>
-      <div>
-        <button onClick={crearNuevo}>Crear</button>
-      </div>
-      <section
-        className="section"
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          gap: 20,
-          flexWrap: "wrap",
-        }}
-      >
+      <section className="section">
         {items.map((item) => {
-          return (
-            <ProductCard
-              key={item.id}
-              item={item}
-              className="item"
-              deleteProducts={deleteProducts}
-              modificar={modificar}
-            />
-          );
+          return <ProductCard key={item.id} item={item} className="item" />;
         })}
       </section>
     </>

@@ -1,5 +1,35 @@
 .botonesMenu {
-  position: sticky;
-  margin-right: auto;
-  margin-left: auto;
+  color: #e1ebdf;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+
+#B1:hover {
+  background-color: #97a65a;
+}
+#B2:hover {
+  background-color: #97a65a;
+}
+#B3:hover {
+  background-color: #97a65a;
+}
+#B4:hover {
+  background-color: #97a65a;
+}
+
+#Carrito {
+  position: absolute;
+  top: 30%;
+  right: 2%;
+}
+.miAppBar {
+  background-image: url("../../../assets/images/Banner.png");
+  background-size: cover;
+}
+
+image {
+  width: 100px;
 }

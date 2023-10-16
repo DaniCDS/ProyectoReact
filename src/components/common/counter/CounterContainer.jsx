@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import CounterPresentacional from "./CounterPresentacional";
-import { ClassSharp } from "@mui/icons-material";
 
 const CounterContainer = ({ stock, onAdd }) => {
   const [contador, setContador] = useState(1);

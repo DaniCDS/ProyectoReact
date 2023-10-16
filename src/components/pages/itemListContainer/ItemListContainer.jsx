@@ -1,10 +1,9 @@
 import ItemList from "./ItemList";
-import { products } from "../../../ProductsMock";
+import { products } from "../../../productsMock";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({ saludo, edad }) => {
+const ItemListContainer = ({}) => {
   const [items, setItems] = useState([]);
   const [isChanged, setIsChange] = useState(false);
 

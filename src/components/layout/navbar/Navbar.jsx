@@ -4,35 +4,60 @@ import { AppBar, Toolbar, IconButton, Button } from "@mui/material";
 import "./NavBar.css";
 import { Outlet, Link } from "react-router-dom";
 import Image from "../../common/image/Image";
+import * as React from "react";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import Box from "@mui/material/Box";
 
 const Navbar = () => {
   return (
     <>
       <div>
-        <AppBar>
+        <AppBar className="miAppBar">
           <Toolbar>
-            <IconButton color="inherit" aria-label="menu">
-              <MenuIcon />
-            </IconButton>
             <Link to="/">
               <Image />
-              <h6>Muebles de Diseño</h6>
             </Link>
-            <div className="botonesMenu">
-              <Link to="/category/HomeOffice">
-                <Button color="inherit">Home Office</Button>
-              </Link>
-              <Link to="/category/Living">
-                <Button color="inherit">Living</Button>
-              </Link>
-              <Link to="/category/comedor">
-                <Button color="inherit">Comedor</Button>
-              </Link>
-              <Link to="/category/dormitorio">
-                <Button color="inherit">Dormitorio</Button>
-              </Link>
-            </div>
-            <CartWidget />
+            <Box id="Carrito">
+              <CartWidget />
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                "& > *": {
+                  m: 1,
+                },
+              }}
+            >
+              <ButtonGroup
+                className="botonesMenu"
+                variant="text"
+                aria-label="text button group"
+                color="secondary"
+              >
+                <Link to="/category/HomeOffice">
+                  <Button color="secondary" id="B1">
+                    Home Office
+                  </Button>
+                </Link>
+                <Link to="/category/Living">
+                  <Button color="secondary" id="B2">
+                    Living
+                  </Button>
+                </Link>
+                <Link to="/category/comedor">
+                  <Button color="secondary" id="B3">
+                    Comedor
+                  </Button>
+                </Link>
+                <Link to="/category/dormitorio">
+                  <Button color="secondary" id="B4">
+                    Dormitorio
+                  </Button>
+                </Link>
+              </ButtonGroup>
+            </Box>
           </Toolbar>
         </AppBar>
       </div>

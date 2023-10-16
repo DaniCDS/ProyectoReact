@@ -1,8 +1,6 @@
 import { ThemeProvider } from "@emotion/react";
-import MaterialUi from "./components/pages/MaterialUi/materialUi";
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
 import { customTheme } from "../themeConfig";
-import { makeStyles } from "@mui/material";
 import ItemDetailContainer from "./components/pages/itemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "../src/components/pages/cart/Cart";

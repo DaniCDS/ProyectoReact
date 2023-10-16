@@ -8,10 +8,15 @@ const CartWidget = () => {
       <Badge
         badgeContent={0}
         showZero
-        color="primary"
+        color="secondary"
         anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
       >
-        <ShoppingCartIcon color="action" />
+        <ShoppingCartIcon
+          color="action"
+          id="Carrito"
+          fontSize="Large"
+          sx={{ fontSize: 30 }}
+        />
       </Badge>
     </Link>
   );

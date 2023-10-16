@@ -5,12 +5,12 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ item, deleteProducts, modificar }) => {
+const ProductCard = ({ item }) => {
   return (
-    <Card sx={{ Width: 345 }}>
+    <Card className="Card">
       <CardActionArea>
         <CardMedia
-          sx={{ height: 140 }}
+          sx={{ width: 400, height: 350 }}
           image={item.img}
           title={`mueble ${item.title}`}
         />
@@ -18,7 +18,7 @@ const ProductCard = ({ item, deleteProducts, modificar }) => {
           <Typography gutterBottom variant="h5" component="div">
             {item.title}
           </Typography>
-          <Typography variant="h6" color="text.secondary">
+          <Typography variant="h6" color="text.secondary" id="descripcion">
             {item.description}
           </Typography>
           <Typography variant="body2" color="text.secondary">

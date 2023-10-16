@@ -1,10 +1,23 @@
+import { Button } from "@mui/material";
+
 const CounterPresentacional = ({ sumar, contador, restar, onAdd }) => {
   return (
     <div>
-      <button onClick={sumar}>sumar</button>
+      <Button onClick={sumar} size="small" color="primary" variant="outlined">
+        Sumar
+      </Button>
       <h4>{contador}</h4>
-      <button onClick={restar}>restar</button>
-      <button onClick={(contador) => onAdd()}>Agregar al carrito</button>
+      <Button size="small" color="primary" variant="outlined" onClick={restar}>
+        Restar
+      </Button>
+      <Button
+        size="small"
+        color="primary"
+        variant="outlined"
+        onClick={(contador) => onAdd()}
+      >
+        Agregar al carrito
+      </Button>
     </div>
   );
 };

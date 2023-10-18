@@ -5,7 +5,7 @@ import Navbar from "./navbar/Navbar";
 const Layout = () => {
   return (
     <div>
-      <div style={{ height: "10vh" }}>
+      <div style={{ height: "10vh", marginBottom: "20" }}>
         <Navbar />
       </div>
       <div style={{ minHeight: "80vh" }}>

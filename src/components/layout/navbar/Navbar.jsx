@@ -11,8 +11,8 @@ import Box from "@mui/material/Box";
 const Navbar = () => {
   return (
     <>
-      <div>
-        <AppBar className="miAppBar">
+      <AppBar className="miAppBar">
+        <div>
           <Toolbar>
             <Link to="/">
               <Image />
@@ -59,8 +59,8 @@ const Navbar = () => {
               </ButtonGroup>
             </Box>
           </Toolbar>
-        </AppBar>
-      </div>
+        </div>
+      </AppBar>
     </>
   );
 };

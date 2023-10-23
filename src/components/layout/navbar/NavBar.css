@@ -28,6 +28,7 @@
 .miAppBar {
   background-image: url("../../../assets/images/Banner.png");
   background-size: cover;
+  position: sticky;
 }
 
 image {

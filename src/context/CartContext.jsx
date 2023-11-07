@@ -39,10 +39,40 @@ const CartContextComponent = ({ children }) => {
     setCart([]);
   };
 
-  // obtener el total del carrito
   // poder borrar un elemento particular del carrito
+
+  const deleteProductById = (id) => {
+    let newArr = cart.filter((product) => product.id !== id);
+    setCart(newArr);
+  };
+
   // obtener la cantidad de elementos
-  let data = { cart, addToCart, getQuantityById, clearCart };
+
+  const getTotalQuantity = () => {
+    let total = cart.reduce((acc, elemento) => {
+      return acc + elemento.quantity;
+    }, 0);
+
+    return total;
+  };
+
+  // obtener el total del carrito
+  const getTotalPrice = () => {
+    let total = cart.reduce((acc, elemento) => {
+      return acc + elemento.price * elemento.quantity;
+    }, 0);
+    return total;
+  };
+
+  let data = {
+    cart,
+    addToCart,
+    getQuantityById,
+    clearCart,
+    deleteProductById,
+    getTotalPrice,
+    getTotalQuantity,
+  };
 
   return (
     <div>

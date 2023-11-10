@@ -3,13 +3,11 @@ import "./ItemListContainer.css";
 
 const ItemList = ({ items }) => {
   return (
-    <>
-      <section className="section">
-        {items.map((item) => {
-          return <ProductCard key={item.id} item={item} className="item" />;
-        })}
-      </section>
-    </>
+    <section className="section">
+      {items.map((item) => {
+        return <ProductCard key={item.id} item={item} className="item" />;
+      })}
+    </section>
   );
 };
 

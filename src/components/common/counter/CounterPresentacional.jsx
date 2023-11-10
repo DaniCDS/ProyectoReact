@@ -14,7 +14,7 @@ const CounterPresentacional = ({ sumar, contador, restar, onAdd }) => {
         size="small"
         color="primary"
         variant="outlined"
-        onClick={(contador) => onAdd()}
+        onClick={() => onAdd(contador)}
       >
         Agregar al carrito
       </Button>

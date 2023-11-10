@@ -1,33 +1,52 @@
 import ItemList from "./ItemList";
-import { products } from "../../../productsMock";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import Skeleton from "@mui/material/Skeleton";
+import { collection, getDocs, query, where, addDoc } from "@firebase/firestore";
+import { db } from "../../../firebaseConfig";
+import { Button } from "@mui/base";
+import { products } from "../../../productsMock";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
   const { categoryName } = useParams();
 
-  useEffect(() => {
-    const productosFiltrados = products.filter(
-      (product) => product.category === categoryName
-    );
-    const tarea = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(categoryName ? productosFiltrados : products);
-      }, 2000);
-    });
+  // const rellenarDB = () => {
+  //   const prodCollection = collection(db, "products");
 
-    tarea.then((res) => setItems(res)).catch((error) => console.log(error));
+  //   products.forEach((elemento) => {
+  //     addDoc(prodCollection, elemento);
+  //   });
+  // };
+
+  useEffect(() => {
+    let productsCollection = collection(db, "products");
+    let consulta = undefined;
+
+    if (!categoryName) {
+      consulta = productsCollection;
+    } else {
+      consulta = query(
+        productsCollection,
+        where("category", "==", categoryName)
+      );
+    }
+    getDocs(consulta).then((res) => {
+      let newArray = res.docs.map((product) => {
+        return { ...product.data(), id: product.id };
+      });
+      // let arrayFiltrado = newArray.filter((elemento)=>elemento.stock > 0)
+      setItems(newArray);
+    });
   }, [categoryName]);
-  // if (items.length === 0) {
-  //   return <h1>Cargando.....</h1>;
-  // }
 
   return (
     <>
+      {/* <Button varian="contained" onClick={rellenarDB}> */}
+      {/* Rellenar
+      </Button> */}
       {items.length === 0 ? (
         // <ClimbingBoxLoader
         //   size={40}
@@ -53,6 +72,7 @@ const ItemListContainer = () => {
         </div>
       ) : (
         <ItemList items={items} />
+        // <h1>algo</h1>
       )}
     </>
   );

@@ -8,7 +8,7 @@ import * as React from "react";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Box from "@mui/material/Box";
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <>
       <div>

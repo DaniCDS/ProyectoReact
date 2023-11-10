@@ -1,7 +1,7 @@
 import Cart from "../components/pages/cart/Cart";
 import ItemDetailContainer from "../components/pages/itemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "../components/pages/itemListContainer/ItemListContainer";
-import CheckoutFormik from "../components/pages/checkoutFormik/CheckoutFormik";
+import CheckOut from "../components/pages/checkout/CheckOut";
 
 export const routes = [
   {
@@ -27,6 +27,6 @@ export const routes = [
   {
     id: "checkout",
     path: "/checkout",
-    Element: CheckoutFormik,
+    Element: CheckOut,
   },
 ];

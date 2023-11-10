@@ -1,23 +1,5 @@
 export let products = [
   {
-    id: 1,
-    title: "Bahiut Blanco con vidrio",
-    price: 15000,
-    stock: 4,
-    description: "Bahiut de pino pintado con laca",
-    category: "Living",
-    img: "https://d2r9epyceweg5n.cloudfront.net/stores/102/273/products/bahiut-tango-150-tapa-madera1-80494844187f37cbdb16484852322335-1024-1024.jpg",
-  },
-  {
-    id: 2,
-    title: "Biblioteca Minimalista",
-    price: 15000,
-    stock: 4,
-    description: "Biblioteca de melamina",
-    category: "HomeOffice",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxWlAH21Z6Iiie4GX8zQZcr74OcQxnasCvYg&usqp=CAU",
-  },
-  {
     id: 3,
     title: "Estantería de Cocina con Hierro",
     price: 15000,

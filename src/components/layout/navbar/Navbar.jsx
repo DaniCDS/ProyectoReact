@@ -1,14 +1,28 @@
 import CartWidget from "../../common/cardWidget/CartWidget";
-import MenuIcon from "@mui/icons-material/Menu";
-import { AppBar, Toolbar, IconButton, Button } from "@mui/material";
+import { AppBar, Button, Toolbar } from "@mui/material";
 import "./NavBar.css";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Image from "../../common/image/Image";
-import * as React from "react";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Box from "@mui/material/Box";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../../firebaseConfig";
+import { useEffect, useState } from "react";
 
 export const Navbar = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    const categoriesCollection = collection(db, "categories");
+    getDocs(categoriesCollection)
+      .then((res) => {
+        let arrayCategories = res.docs.map((category) => {
+          return { ...category.data(), id: category.id };
+        });
+        setCategories(arrayCategories);
+      })
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <>
       <div>

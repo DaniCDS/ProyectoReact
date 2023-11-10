@@ -25,8 +25,8 @@ export const Navbar = () => {
   }, []);
   return (
     <>
-      <div>
-        <AppBar className="miAppBar">
+      <AppBar className="miAppBar">
+        <div>
           <Toolbar>
             <Link to="/">
               <Image />
@@ -73,8 +73,8 @@ export const Navbar = () => {
               </ButtonGroup>
             </Box>
           </Toolbar>
-        </AppBar>
-      </div>
+        </div>
+      </AppBar>
     </>
   );
 };

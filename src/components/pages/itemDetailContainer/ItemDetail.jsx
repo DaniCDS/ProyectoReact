@@ -7,7 +7,6 @@ const ItemDetail = ({ productSelected, onAdd, initial, showCounter }) => {
     <div>
       <div className={"containerItemDetail"}>
         <div className={"containerImage"}>
-          {/* <h2>{productSelected.title}</h2> */}
           <img src={productSelected.img} alt="" className="imagen" />
         </div>
 
@@ -16,7 +15,6 @@ const ItemDetail = ({ productSelected, onAdd, initial, showCounter }) => {
             <span style={{ fontSize: "23px" }}>Nombre:</span>{" "}
             {productSelected.title}
           </h2>
-          {/* <h5>Ya tienes {initial} en el carrito</h5> */}
 
           <h2 style={{ fontFamily: "monospace" }}>
             <span style={{ fontSize: "23px" }}>Descripcion:</span>{" "}

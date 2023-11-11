@@ -4,12 +4,12 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBd3M7KP2pBGlVvio9fUdPk0RknpKVoqmo",
-  authDomain: "muebleriadp.firebaseapp.com",
-  projectId: "muebleriadp",
-  storageBucket: "muebleriadp.appspot.com",
-  messagingSenderId: "512155028302",
-  appId: "1:512155028302:web:f4b12590c0f6f26024ec1f",
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGE,
+  messagingSenderId: import.meta.env.VITE_MESSAGE,
+  appId: import.meta.env.VITE_APPID,
   measurementId: "G-L9B7HWQD67",
 };
 

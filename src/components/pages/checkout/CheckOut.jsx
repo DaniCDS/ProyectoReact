@@ -3,8 +3,9 @@ import { CartContext } from "../../../context/CartContext";
 import { serverTimestamp } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
 import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
-import { red } from "@mui/material/colors";
 import { Link } from "react-router-dom";
+import { TextField } from "@mui/material";
+import "../checkout/CheckOut.css";
 
 const CheckOut = () => {
   const [userInfo, setUserInfo] = useState({
@@ -68,32 +69,48 @@ const CheckOut = () => {
           <Link to="/">Seguir comprando</Link>
         </div>
       ) : (
-        <div>
-          <form onSubmit={enviarFormulario}>
-            <input
+        <div className="formulario">
+          <form
+            onSubmit={enviarFormulario}
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <TextField
               type="text"
               name="nombre"
+              variant="outlined"
               onChange={handleChange}
               placeholder="Nombre"
+              color="primary"
+              style={{ backgroundColor: "white" }}
             />
             <span style={{ color: "crimson" }}>{errors.nombre}</span>
-            <input
+            <TextField
               type="text"
               name="telefono"
+              variant="outlined"
               onChange={handleChange}
               placeholder="Telefono"
+              style={{ backgroundColor: "white" }}
             />
             <span style={{ color: "crimson" }}>{errors.apellido}</span>
-            <input
+            <TextField
               type="text"
               name="mail"
+              variant="outlined"
               onChange={handleChange}
               placeholder="Email"
+              style={{ backgroundColor: "white" }}
             />
             <span style={{ color: "crimson" }}>{errors.mail}</span>
 
-            <button type="submit"> Enviar </button>
-            <button type="button" onClick={() => console.log("se cancelo")}>
+            <button type="submit" style={{ backgroundColor: "green" }}>
+              Comprar
+            </button>
+            <button
+              type="button"
+              onClick={() => console.log("se cancelo")}
+              style={{ backgroundColor: "red" }}
+            >
               Cancelar
             </button>
           </form>

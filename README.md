@@ -1,8 +1,28 @@
-# React + Vite
+# Esta es mi tienda
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##Las herramientas utilizadas son:
 
-Currently, two official plugins are available:
+- React Js
+- Firebase
+- Formik
+- Yup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![](/public/vite.svg)
+
+[Material ui](www.materialui.com)
+
+```
+npm i formik
+```
+
+```
+npm run dev
+```
+
+```javascript
+const sumar = (n1, n2) => {
+  return n1 + n2;
+};
+
+console.log("hola");
+```

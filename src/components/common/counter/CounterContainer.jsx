@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import CounterPresentacional from "./CounterPresentacional";
 
 const CounterContainer = ({ stock, onAdd, initial = 1 }) => {

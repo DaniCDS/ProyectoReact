@@ -38,9 +38,6 @@ const Cart = () => {
           <h2>{product.title}</h2>
           <h2>{product.price}</h2>
           <h3>Cantidad: {product.quantity}</h3>
-          {/* <Button onClick={() => deleteProductById(product.id)}>
-            Eliminar
-          </Button> */}
           <IconButton onClick={() => deleteProductById(product.id)}>
             <DeleteForeverIcon color="primary" />
           </IconButton>

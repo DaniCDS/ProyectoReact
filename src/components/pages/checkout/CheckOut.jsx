@@ -106,11 +106,7 @@ const CheckOut = () => {
             <button type="submit" style={{ backgroundColor: "green" }}>
               Comprar
             </button>
-            <button
-              type="button"
-              onClick={() => console.log("se cancelo")}
-              style={{ backgroundColor: "red" }}
-            >
+            <button type="button" style={{ backgroundColor: "red" }}>
               Cancelar
             </button>
           </form>

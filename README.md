@@ -1,28 +1,46 @@
-# Esta es mi tienda
+# Mueblería DP
 
-##Las herramientas utilizadas son:
+## Este proyecto trata sobre la venta de muebles de diseño
+
+## Las herramientas utilizadas son:
 
 - React Js
 - Firebase
 - Formik
 - Yup
+- Git
+- Vite
 
 ![](/public/vite.svg)
 
-[Material ui](www.materialui.com)
+[Material ui](https://mui.com/)
+
+### Para poder ejecutar, debe instar las librerías:
+
+### Vite:
 
 ```
-npm i formik
+npm create vite@latest
 ```
 
 ```
 npm run dev
 ```
 
-```javascript
-const sumar = (n1, n2) => {
-  return n1 + n2;
-};
+### Material:
 
-console.log("hola");
+```
+npm install @mui/material @emotion/react @emotion/styled
+```
+
+```
+npm install @mui/material @mui/styled-engine-sc styled-components
+```
+
+```
+npm install @fontsource/roboto
+```
+
+```
+npm install @mui/icons-material
 ```

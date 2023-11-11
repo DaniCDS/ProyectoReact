@@ -12,10 +12,7 @@ const CheckoutFormik = () => {
       password: "",
       repeatPassword: "",
     },
-    onSubmit: (data) => {
-      console.log("se envio");
-      console.log(data);
-    },
+    onSubmit: (data) => {},
     validateOnChange: false,
     validationSchema: Yup.object({
       nombre: Yup.string()
@@ -38,7 +35,6 @@ const CheckoutFormik = () => {
     }),
   });
 
-  console.log(errors);
   return (
     <div style={{ padding: "50px" }}>
       <form onSubmit={handleSubmit}>

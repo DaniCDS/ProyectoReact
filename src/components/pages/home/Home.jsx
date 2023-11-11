@@ -5,7 +5,6 @@ export const Home = () => {
   const [counter, setCounter] = useState(0); // Arreglo con 2 posiciones [Variable, funcion]
   const [darkMode, setDarkMode] = useState(false);
 
-  console.log(darkMode);
   const switchMode = () => {
     setDarkMode(!darkMode);
   };

@@ -36,14 +36,84 @@ const ItemListContainer = () => {
       {items.length === 0 ? (
         <div style={{ display: "flex", gap: 20 }}>
           <div>
-            <Skeleton variant="rectangular" width={250} height={120} />
-            <Skeleton variant="rectangular" width={50} height={30} />
-            <Skeleton variant="rectangular" width={50} height={30} />
+            <Skeleton
+              variant="rectangular"
+              width={250}
+              height={120}
+              style={{ backgroundColor: "#9FD589" }}
+            />
+            <Skeleton
+              variant="rectangular"
+              width={50}
+              height={30}
+              style={{ backgroundColor: "#9FD589" }}
+            />
+            <Skeleton
+              variant="rectangular"
+              width={50}
+              height={30}
+              style={{ backgroundColor: "#9FD589" }}
+            />
           </div>
           <div>
-            <Skeleton variant="rectangular" width={250} height={120} />
-            <Skeleton variant="rectangular" width={50} height={30} />
-            <Skeleton variant="rectangular" width={50} height={30} />
+            <Skeleton
+              variant="rectangular"
+              width={250}
+              height={120}
+              style={{ backgroundColor: "#9FD589" }}
+            />
+            <Skeleton
+              variant="rectangular"
+              width={50}
+              height={30}
+              style={{ backgroundColor: "#9FD589" }}
+            />
+            <Skeleton
+              variant="rectangular"
+              width={50}
+              height={30}
+              style={{ backgroundColor: "#9FD589" }}
+            />
+          </div>
+          <div>
+            <Skeleton
+              variant="rectangular"
+              width={250}
+              height={120}
+              style={{ backgroundColor: "#9FD589" }}
+            />
+            <Skeleton
+              variant="rectangular"
+              width={50}
+              height={30}
+              style={{ backgroundColor: "#9FD589" }}
+            />
+            <Skeleton
+              variant="rectangular"
+              width={50}
+              height={30}
+              style={{ backgroundColor: "#9FD589" }}
+            />
+          </div>
+          <div>
+            <Skeleton
+              variant="rectangular"
+              width={250}
+              height={120}
+              style={{ backgroundColor: "#9FD589" }}
+            />
+            <Skeleton
+              variant="rectangular"
+              width={50}
+              height={30}
+              style={{ backgroundColor: "#9FD589" }}
+            />
+            <Skeleton
+              variant="rectangular"
+              width={50}
+              height={30}
+              style={{ backgroundColor: "#9FD589" }}
+            />
           </div>
         </div>
       ) : (
